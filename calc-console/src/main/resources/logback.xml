@@ -11,7 +11,7 @@
         </encoder>
     </appender>
 
-    <appender name="FILEERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="FILE_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/Error.log</file>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -30,7 +30,7 @@
         </encoder>
     </appender>
 
-    <appender name="FILEWARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="FILE_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/Warning.log</file>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -52,10 +52,10 @@
     </appender>
 
     <logger name="com.epam.rd.june2018.calc" level="error" additivity="false">
-        <appender-ref ref="FILEERROR" />
+        <appender-ref ref="FILE_ERROR" />
     </logger>
     <logger name="com.epam.rd.june2018.calc" level="WARN" additivity="false">
-        <appender-ref ref="FILEWARN" />
+        <appender-ref ref="FILE_WARN" />
     </logger>
     <logger name="com.epam.rd.june2018.calc" level="INFO" additivity="false">
         <appender-ref ref="STDOUT" />

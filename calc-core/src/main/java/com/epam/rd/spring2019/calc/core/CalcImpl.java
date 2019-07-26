@@ -22,9 +22,6 @@ public class CalcImpl implements Calc
 
     @Override
     public double division(double a, double b) {
-        if(b != 0)
-        {
-        }
-        return 0;
+       return a / b;
     }
 }

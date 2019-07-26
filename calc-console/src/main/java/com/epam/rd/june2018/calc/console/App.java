@@ -1,30 +1,23 @@
 package com.epam.rd.june2018.calc.console;
 
 
+import com.epam.rd.spring2019.calc.core.CalcImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class App {
-    private static final Logger logger = LoggerFactory.getLogger(App.class);
+    private static final Logger LOGGER_ERROR = LoggerFactory.getLogger(App.class);
+    private static final Logger LOGGER_WARNING = LoggerFactory.getLogger(App.class);
+    private static final Logger LOGGER_INFO = LoggerFactory.getLogger(App.class);
     public static void main(String[] args) {
 
 
+        LOGGER_INFO.info("Application Calculator Started!");
+        LOGGER_INFO.info("Version: 0.1");
 
 
-        logger.error("Hello from Logback");
 
-        logger.error("getNumber() : {}", getNumber());
-
-    }
-
-    static int getNumber() {
-        return 5;
-    }
-
-
-        /*if (args.length > 0 && args.length < 4 ) {
-
-
+        /*if (args.length != 3) {
             CalcImpl calc = new CalcImpl();
             switch(args[2]) {
                 case "+":
@@ -40,6 +33,10 @@ public class App {
                         System.out.println("not a valid operator");
             }
         } else {
-            ERROR_LOGGER.info("use structure -- number number operator --");
+            LOGGER_ERROR.error("Incorrect number of arguments: "+ args.length+ "Expected 3");
+            LOGGER_ERROR.error("Use structure -[ number1 number2 operator ]-");
+            LOGGER_INFO.info("Use structure -[ number1 number2 operator ]-");
+
         }*/
     }
+}

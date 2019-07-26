@@ -44,15 +44,6 @@
     </dependencies>
 
     <build>
-
-        <resources>
-            <resource>
-                <directory>calc-console\src\main\resources</directory>
-                <includes>
-                    <include>logback.xml</include>
-                </includes>
-            </resource>
-        </resources>
         <finalName>calc</finalName>
         <plugins>
             <!-- Make this jar executable -->
